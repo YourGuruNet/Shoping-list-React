@@ -56,4 +56,8 @@ const Section = styled.section`
     padding: 2rem;
     color: var(--mainColor-light2);
   }
+
+  @media screen and (max-width: 400px) {
+    width: 90%;
+  }
 `;
