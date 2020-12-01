@@ -6,18 +6,32 @@ import ToDoInput from './components/ToDoInput';
 import ToDoList from './components/ToDoList';
 class App extends Component {
   state = {
-    items: [
-      { id: 1, title: 'banana' },
-      { id: 2, title: 'apple' },
-      { id: 3, title: 'cheese' },
-    ],
+    items: [],
     id: uuid(),
     item: '',
     editItem: false,
   };
 
-  handleChange = (e) => {};
-  handleSubmit = (e) => {};
+  handleChange = (event) => {
+    this.setState({
+      item: event.target.value,
+    });
+  };
+  handleSubmit = (event) => {
+    event.preventDefault();
+    const newItem = {
+      id: this.state.id,
+      title: this.state.item,
+    }; //previous values + new values
+    const updatedItems = [...this.state.items, newItem];
+
+    this.setState({
+      items: updatedItems,
+      item: '',
+      id: uuid(),
+      editItem: false,
+    });
+  };
   clearList = () => {};
   deleteItem = () => {};
   editItem = () => {};

@@ -7,7 +7,6 @@ export default class ToDoList extends Component {
       <div>
         to do list
         <ToDoItem />
-        <ToDoItem />
       </div>
     );
   }
