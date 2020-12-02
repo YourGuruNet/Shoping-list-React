@@ -17,6 +17,7 @@ export default class ToDoInput extends Component {
             placeholder='Insert product..'
           />
           <button
+            disabled={item ? false : true}
             className={edit ? 'button editButton' : 'button'}
             type='submit'>
             {edit ? 'Edit item' : 'Add'}{' '}
