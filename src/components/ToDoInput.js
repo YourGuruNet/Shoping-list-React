@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { MdAddShoppingCart } from 'react-icons/md';
-
+import { MdModeEdit } from 'react-icons/md';
 import styled from 'styled-components';
+
 export default class ToDoInput extends Component {
   render() {
-    const { item, handleChange, handleSubmit, editItem } = this.props;
+    const { item, handleChange, handleSubmit, edit } = this.props;
     return (
       <Section>
         <form onSubmit={handleSubmit}>
@@ -15,8 +16,11 @@ export default class ToDoInput extends Component {
             type='text'
             placeholder='Insert product..'
           />
-          <button className='button' type='submit'>
-            Add <MdAddShoppingCart />
+          <button
+            className={edit ? 'button editButton' : 'button'}
+            type='submit'>
+            {edit ? 'Edit item' : 'Add'}{' '}
+            {edit ? <MdModeEdit /> : <MdAddShoppingCart />}
           </button>
         </form>
       </Section>
@@ -43,6 +47,7 @@ const Section = styled.div`
     }
   }
   .button {
+    text-transform: uppercase;
     margin: 1rem 0;
     float: right;
     font-size: 1.8rem;
@@ -59,6 +64,16 @@ const Section = styled.div`
     :focus {
       box-shadow: 0 0 4rem 0.5rem var(--mainColor-light2);
       outline: none;
+    }
+  }
+  .editButton {
+    background-color: var(--mainColor-light);
+    border: solid 0.1rem var(--mainColor-light);
+    color: var(--mainColor);
+    :hover {
+      background-color: var(--mainColor);
+      border: solid 0.1rem var(--mainColor-light);
+      color: var(--mainColor-light2);
     }
   }
 `;
