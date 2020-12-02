@@ -91,7 +91,7 @@ const Section = styled.section`
     text-transform: uppercase;
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 600px) {
     width: 90%;
   }
 `;
