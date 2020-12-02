@@ -25,4 +25,5 @@ html {
 body {
   font-family: 'Architects Daughter', cursive;
   background-color: var(--mainColor);
+  letter-spacing: 0.2rem;
 }

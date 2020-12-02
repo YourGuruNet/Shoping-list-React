@@ -34,7 +34,9 @@ const Section = styled.div`
   margin: 0 auto;
 
   .input {
-    width: 95%;
+    display: block;
+    margin: 0 auto;
+    width: 92%;
     padding: 1rem;
     background-color: var(--mainColor);
     color: var(--mainColor-light2);
