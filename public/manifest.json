@@ -1,5 +1,5 @@
 {
-  "short_name": "React App",
+  "short_name": "Shopping list",
   "name": "Shopping list",
   "icons": [
     {
@@ -18,8 +18,8 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "Shopping List",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#000000"
+  "background_color": "#6a9e98"
 }
